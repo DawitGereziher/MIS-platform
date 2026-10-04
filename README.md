@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌍 NexusMEAL Enterprise MIS
+# NexusMEAL Enterprise MIS
 ### Next-Generation Digital Monitoring, Evaluation, Accountability & Learning Platform
 **National Youth Employment & Enterprise Development Programme**
 
@@ -20,20 +20,20 @@
 > The system replaces fragmented paper intake and disjointed spreadsheets with a real-time, tamper-evident Management Information System (MIS) designed for national-scale social development and donor-funded initiatives.
 
 <p align="center">
-  <a href="#-quick-start">🚀 Quick Start</a> •
-  <a href="#-system-architecture">🏛️ Architecture</a> •
-  <a href="#-offline-first-sync--resilience-lifecycle">🔄 Offline Sync</a> •
-  <a href="#-database-schema--entity-relationships">🗄️ Database & ERD</a> •
-  <a href="#-comprehensive-module-matrix">📦 Modules</a> •
-  <a href="#-backend-api-reference">🔌 API Docs</a> •
-  <a href="#-security-cryptography--compliance">🛡️ Security & Law</a>
+  <a href="#-quick-start"> Quick Start</a> •
+  <a href="#-system-architecture">Architecture</a> •
+  <a href="#-offline-first-sync--resilience-lifecycle">Offline Sync</a> •
+  <a href="#-database-schema--entity-relationships">Database & ERD</a> •
+  <a href="#-comprehensive-module-matrix">Modules</a> •
+  <a href="#-backend-api-reference">API Docs</a> •
+  <a href="#-security-cryptography--compliance">Security & Law</a>
 </p>
 
 </div>
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [1. Executive Summary & Value Proposition](#1-executive-summary--value-proposition)
 - [2. System Architecture](#2-system-architecture)
@@ -82,7 +82,7 @@ Prior to this platform, large-scale employment initiatives faced acute operation
   (Fayida ID Verification)       (RBAC Regional Isolation)   (Audit Trail, CSV & GIS)
 ```
 
-### 🌟 Core Capabilities
+### Core Capabilities
 - **Massive Scale Tracking:** Designed for 50,000+ youth beneficiaries and 3,500+ micro-enterprises across 8 administrative regions (Addis Ababa, Oromia, Amhara, Sidama, Somali, Tigray, Afar, and Dire Dawa).
 - **Zero Data Loss via Offline PWA:** Field officers collect survey submissions and intake profiles in remote areas without internet; submissions automatically queue in encrypted local storage and batch sync upon reconnection.
 - **National Digital ID (Fayida) Integration:** Pre-wired against the National Digital ID Platform (NIDP) for cryptographic deduplication and citizen identity verification.
@@ -605,7 +605,7 @@ The API server will listen on `http://localhost:4000/api`.
 
 ---
 
-### 🔑 Pre-Seeded Demonstration Accounts
+### Pre-Seeded Demonstration Accounts
 
 All accounts share the secure demonstration password: `MealDemo@2026`
 
@@ -630,7 +630,7 @@ Summary of Core Enterprise Endpoints:
 ```
 
 <details>
-<summary><b>🔐 Authentication & User Governance (<code>/api/auth</code>)</b></summary>
+<summary><b>Authentication & User Governance (<code>/api/auth</code>)</b></summary>
 
 | Verb | Path | Summary / Description |
 |:---:|:---|:---|
@@ -657,7 +657,7 @@ Summary of Core Enterprise Endpoints:
 </details>
 
 <details>
-<summary><b>🏢 Enterprise & Finance Endpoints (<code>/api/enterprises</code>)</b></summary>
+<summary><b>Enterprise & Finance Endpoints (<code>/api/enterprises</code>)</b></summary>
 
 | Verb | Path | Summary / Description |
 |:---:|:---|:---|
@@ -670,7 +670,7 @@ Summary of Core Enterprise Endpoints:
 </details>
 
 <details>
-<summary><b>🛡️ Safeguarding, AAP & Audit (<code>/api/accountability</code> & <code>/api/system</code>)</b></summary>
+<summary><b>Safeguarding, AAP & Audit (<code>/api/accountability</code> & <code>/api/system</code>)</b></summary>
 
 | Verb | Path | Summary / Description |
 |:---:|:---|:---|
@@ -684,7 +684,7 @@ Summary of Core Enterprise Endpoints:
 </details>
 
 <details>
-<summary><b>📊 Evidence, PIRS & Offline Sync (<code>/api/evidence</code>)</b></summary>
+<summary><b>Evidence, PIRS & Offline Sync (<code>/api/evidence</code>)</b></summary>
 
 | Verb | Path | Summary / Description |
 |:---:|:---|:---|
@@ -699,19 +699,19 @@ Summary of Core Enterprise Endpoints:
 
 ## 11. Security, Cryptography & Compliance
 
-### 🔒 Cryptographic Password Security
+### Cryptographic Password Security
 - **PBKDF2 SHA-512 Encryption:** All user passwords undergo Key Derivation using PBKDF2 with SHA-512 hashing, a 16-byte cryptographically secure random salt, and 1,000 iterations.
 - **Timing-Safe Verification:** Password hash comparisons employ `crypto.timingSafeEqual` to neutralize side-channel timing attacks.
 - **Zero Plaintext Storage:** Neither the client, server runtime, nor database persists raw credentials.
 
-### 📜 Personal Data Protection Proclamation No. 1321/2024
+### Personal Data Protection Proclamation No. 1321/2024
 The platform was architected specifically to fulfill statutory data protection requirements:
 1. **Lawful Processing & Consent (Art. 5 & 6):** Beneficiary Fayida data is collected solely with informed consent for youth empowerment purposes.
 2. **Data Minimization (Art. 7):** Demographics are limited strictly to indicators mandated by the project logframe.
 3. **Data Security & Safeguards (Art. 23):** Field-level protection for beneficiary PII, TLS 1.3 in transit, and role-restricted viewing.
 4. **Accountability & Audit (Art. 24):** Complete, tamper-evident audit logs record who accessed or mutated any beneficiary record.
 
-### 🛡️ PSEA & Zero-Tolerance Safeguarding
+### PSEA & Zero-Tolerance Safeguarding
 - **Confidential Flagging:** Sensitive incidents (`is_confidential = true`) are strictly inaccessible to standard officers, visible only to designated PSEA investigators.
 - **SLA Breach Monitoring:** Built-in alerts trigger if an incident remains unacknowledged past the 48-hour threshold or unaddressed past 30 days.
 
